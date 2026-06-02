@@ -18,6 +18,14 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Debug info (show files and Python)
+        run: |
+          python --version
+          pip --version
+          pwd
+          ls -la
+          cat requirements.txt || true
+
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
